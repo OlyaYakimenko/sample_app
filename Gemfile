@@ -7,6 +7,9 @@ gem 'rails', '4.0.1'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '2.11.0'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'spork'
 end
 
 # Use SCSS for stylesheets
@@ -34,6 +37,8 @@ gem 'jquery-rails'
 group :test do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'capybara', '1.1.2'
+  gem 'rb-fsevent', :require => false
+  gem 'growl'
 end
 
 group :production do
