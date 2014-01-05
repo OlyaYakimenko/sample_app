@@ -3,14 +3,19 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 gem 'bootstrap-sass', '2.1'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '2.11.0'
-  gem 'guard-rspec'
-  gem 'guard-spork'
-  gem 'spork'
+  gem 'guard-rspec', '1.2.1'
+  gem 'guard-spork', '1.2.0'
+  gem 'spork', '0.9.2'
+end
+
+group :development do
+  gem 'annotate', '2.5.0'
 end
 
 # Use SCSS for stylesheets
@@ -38,14 +43,15 @@ gem 'jquery-rails'
 group :test do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'capybara', '1.1.2'
-  gem 'rb-fsevent', :require => false
-  gem 'growl'
+  gem 'rb-fsevent', '0.9.1', :require => false
+  gem 'growl', '1.0.3'
 end
 
 group :production do
   gem 'pg', '0.12.2'
 end
 
+gem 'protected_attributes'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
