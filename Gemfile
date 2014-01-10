@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.1'
 gem 'bootstrap-sass', '2.1'
 gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'turbolinks'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
@@ -45,7 +46,9 @@ group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-fsevent', '0.9.1', :require => false
   gem 'growl', '1.0.3'
-  gem 'factory_girl_rails', '4.1.0'
+  gem 'factory_girl_rails', '4.2.1'
+  gem 'cucumber-rails', '1.4.0', :require => false
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 group :production do
