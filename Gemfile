@@ -1,18 +1,20 @@
 source 'https://rubygems.org'
-
+ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
-gem 'bootstrap-sass', '2.1'
+gem 'rails', '4.0.2'
+gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'turbolinks'
+gem 'jquery-rails'
+gem 'faker', '1.1.2'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'
-  gem 'rspec-rails', '2.11.0'
-  gem 'guard-rspec', '1.2.1'
-  gem 'guard-spork', '1.2.0'
-  gem 'spork', '0.9.2'
+  gem 'rspec-rails', '2.9.0'
+  gem 'guard-rspec', '0.5.5'
 end
 
 group :development do
@@ -24,7 +26,7 @@ group :assets do
   gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
-  gem 'uglifier', '>= 1.3.0'
+  gem 'uglifier', '1.2.3'
 
 # Use CoffeeScript for .js.coffee assets and views
   gem 'coffee-rails', '~> 4.0.0'
@@ -33,7 +35,7 @@ end
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 #gem 'turbolinks'
@@ -44,11 +46,13 @@ gem 'jquery-rails'
 group :test do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'capybara', '1.1.2'
-  gem 'rb-fsevent', '0.9.1', :require => false
+  gem 'launchy', '2.1.0'
   gem 'growl', '1.0.3'
-  gem 'factory_girl_rails', '4.2.1'
-  gem 'cucumber-rails', '1.4.0', :require => false
-  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  gem 'factory_girl_rails', '1.4.0'
+  gem 'cucumber-rails', '1.2.1', :require => false
+  gem 'database_cleaner', '0.7.0'
+  gem 'guard-spork', '0.3.2'
+  gem 'spork', '0.9.0'
 end
 
 group :production do
@@ -57,7 +61,7 @@ end
 
 gem 'protected_attributes'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+
 
 # Use unicorn as the app server
 # gem 'unicorn'
